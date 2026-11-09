@@ -8,6 +8,9 @@
 **/venv/
 **/__pycache__/
 
+# Large raw dataset kept outside Git
+/aerotwin-backend/backend/data/2days/2days/flight_data.pkl
+
 # Build files
 **/dist/
 
