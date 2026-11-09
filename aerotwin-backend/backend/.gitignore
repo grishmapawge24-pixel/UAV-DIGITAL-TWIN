@@ -1,0 +1,12 @@
+venv/
+__pycache__/
+*.pyc
+.env
+data/config/
+data/processed/
+data/features/
+data/aerotwin.db
+models/*.pkl
+models/*.json
+!requirements.txt
+.pytest_cache/

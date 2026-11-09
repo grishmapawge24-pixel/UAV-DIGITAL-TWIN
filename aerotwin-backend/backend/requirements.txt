@@ -1,0 +1,25 @@
+# AeroTwin AI backend - Python dependencies
+#
+# Install with (from the backend/ folder, virtual env activated):
+#   pip install -r requirements.txt
+
+# --- Web framework ---------------------------------------------------------
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27,<1.0
+python-multipart>=0.0.9      # form/file parsing support used by FastAPI internals
+websockets>=12.0              # used by the /ws/telemetry/{flight_id} endpoint
+
+# --- Data & ML ---------------------------------------------------------
+pandas>=2.1,<3.0
+numpy>=1.26,<2.1
+scikit-learn>=1.4,<2.0
+scipy>=1.11,<2.0              # used by ml/verify_sensor_mapping.py (Hungarian algorithm)
+joblib>=1.3,<2.0
+
+# --- Config / utils ---------------------------------------------------------
+python-dotenv>=1.0,<2.0
+pydantic>=2.5,<3.0
+
+# --- Optional --------------------------------------------------------------
+# Only needed if you run: python ml/train_fault_model.py --model xgboost
+# xgboost>=2.0,<3.0
